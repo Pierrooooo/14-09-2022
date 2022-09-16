@@ -1,0 +1,81 @@
+body{
+    background-color: $black-red;
+    main{
+        header{
+            .logo{
+                height: 200px;
+                aspect-ratio: 1;
+                position: fixed;
+                top: calc(50% - 100px);
+                left: calc(50% - 100px);
+            }
+        }
+        .loading{
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            opacity: 0;
+        }
+        .loading img{
+            position: absolute;
+            width: 200px;
+            height: 268px;
+            left: calc(50% - 100px);
+            top: calc(50% - 134px);
+            opacity: 1;
+        }
+        .loading-video{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 16px;
+
+            video{
+                height: 100vh;
+                transform: translate(9px);
+            }
+            .scroll{
+                position: relative;
+                height: 80px;
+                width: 3px;
+                background-color: transparent;
+                overflow-y: hidden;
+                z-index: 10;
+                transform: translate(18px, -10vh);
+
+                span{
+                    position: absolute;
+                    inset: 100% 0;
+                    height: 90%;
+                    width: 100%;
+                    border-radius: 3px;
+                    background-color: $white-red;
+                    animation: scroll infinite ease-in-out 2s 0s;
+
+                    &:nth-child(2){
+                        height: 16%;
+                        animation-delay: 2.7s;
+                    }
+                    &:nth-child(3){
+                        height: 8%;
+                        animation-delay: 2.9s;
+                    }
+                }
+            }
+        }
+        .page-content{
+            background-color: red;
+            width: 100%;
+        }
+    }
+}
+
+
+@keyframes scroll {
+    from{top: 100%;}
+    to{top: -100%;}
+}
