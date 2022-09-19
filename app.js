@@ -6,6 +6,7 @@ const logo = document.querySelector('.logo')
 const loadingSection = document.querySelectorAll('.loading')
 const allImagesLoading = document.querySelectorAll('.loading img')
 const loadingVideo = document.querySelectorAll('.loading-video')
+const pageContent = document.querySelectorAll('.page-content')
 
 const newAllImagesLoading = Array.from(allImagesLoading) // Transform my nodeList into an array
 newAllImagesLoading.reverse() // Reverse my array
@@ -35,6 +36,10 @@ window.addEventListener ('load', e => {
         y: '-100vh',
         ease: "power2.inOut"
     })
+    .to(pageContent, .7, {
+        y: '-50vh',
+        ease: "power2.inOut"
+    }, "-=.7s")
 
     TL.play()
 })

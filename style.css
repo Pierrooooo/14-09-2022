@@ -29,15 +29,16 @@ a {
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 body {
   background-color: #020000;
+  font-family: "Anton", sans-serif;
 }
 body main header .logo {
   height: 200px;
@@ -91,6 +92,12 @@ body main .loading-video .scroll span {
   border-radius: 3px;
   background-color: #ffe5e5;
   animation: scroll infinite ease-in-out 2s 0s;
+  background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 body main .loading-video .scroll span:nth-child(2) {
   height: 16%;
@@ -101,8 +108,42 @@ body main .loading-video .scroll span:nth-child(3) {
   animation-delay: 2.9s;
 }
 body main .page-content {
-  background-color: red;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .page-content .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 88%;
+}
+body main .page-content .intro h2 {
+  font-size: 180px;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffe5e5;
+  width: 100%;
+}
+body main .page-content .intro a {
+  font-size: 180px;
+}
+body main .page-content .intro a h2 {
+  position: relative;
+  text-align: right;
+}
+body main .page-content .intro a h2 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body main .page-content .intro a h2 span:nth-child(2) {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  bottom: 0;
+  font-size: 16px;
+  -webkit-text-stroke: 0;
+  color: #ffe5e5;
 }
 
 @keyframes scroll {
