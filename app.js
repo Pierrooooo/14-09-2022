@@ -5,11 +5,13 @@
 const logo = document.querySelector('.logo')
 const loadingSection = document.querySelectorAll('.loading')
 const allImagesLoading = document.querySelectorAll('.loading img')
-const loadingVideo = document.querySelectorAll('.loading-video')
-const pageContent = document.querySelectorAll('.page-content')
-
 const newAllImagesLoading = Array.from(allImagesLoading) // Transform my nodeList into an array
 newAllImagesLoading.reverse() // Reverse my array
+const loadingVideo = document.querySelectorAll('.loading-video')
+const pageContent = document.querySelectorAll('.page-content')
+const h2Spans = document.querySelectorAll('.intro span')
+const newh2Spans = Array.from(h2Spans) // Transform my nodeList into an array
+
 
 window.addEventListener ('load', e => {
 
@@ -43,3 +45,4 @@ window.addEventListener ('load', e => {
 
     TL.play()
 })
+

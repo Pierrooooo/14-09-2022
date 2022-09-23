@@ -95,6 +95,12 @@ body{
                     color: transparent;
                     -webkit-text-stroke: 2px $white-red;
                     width: 100%;
+                    position: relative;
+
+                    span{
+                        position: absolute;
+                        inset: 0;
+                    }
                 }
                 a{
                     font-size: 180px;
